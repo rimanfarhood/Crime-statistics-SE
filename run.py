@@ -25,23 +25,21 @@ def get_user_data():
     Get user input for year and crime offense
     """
     while True:
-        print('Enter the year would like statistics for,')
-        print('between the years 2012 - 2022')
+        print('Enter the year would like statistics for, between 2012 - 2022.')
         print('Example: 2019\n')
 
         global input_year
-        input_year = input("Enter years here:\n")
+        input_year = input("Enter year here:\n")
 
         if validate_year(input_year):
-            print(
-                "\nYou requierd the reported crime statistics"
-                f"for the year {input_year}.\n"
-                )
-            print("Most reported crimes")
-            print("Select the number of the offense you want statistics for.\n")
+            print(f"\nYou requierd the statistics for: {input_year}")
+            print("Select the number of offense you would like statistics for.\n")
+            print("The most reported crimes:")
 
             for index, item in enumerate(offense, start=1):
                 print(f"{index}. {item}")
+            
+            print('\nExample: 7')
             
             while True:
                 global input_crime
@@ -50,7 +48,10 @@ def get_user_data():
                 
 
                 if validate_crime(input_crime):
-                    print(f'The requierd statistics for {offense[(int(input_crime)) - 1]} {input_year}')
+                    print(
+                        'The requierd statistics for ' 
+                        f'{offense[(int(input_crime)) - 1]} {input_year}'
+                        )
                     break
 
             return input_crime
@@ -110,5 +111,14 @@ def statistics():
     
     table = tabulate(col, tablefmt='simple_grid')
     print(table)
+    
 
 
+def main():
+    print('\nReported Crime Statistics Sweden 2012 - 2022.')
+    print('Source: Brå (The Swedish National Council for Crime Prevention)\n')
+    get_user_data()
+    statistics()
+
+    
+main()
