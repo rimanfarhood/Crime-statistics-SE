@@ -1,6 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 from tabulate import tabulate
+import sys
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -112,9 +113,18 @@ def statistics():
     table = tabulate(col, tablefmt='simple_grid')
     print(table)
     
+def restart():
+    """
+    Gives the user option to restart for more
+    statistics or to quit
+    """
 
 
 def main():
+    """
+    Calls all functions from here.
+    """
+
     print('\nReported Crime Statistics Sweden 2012 - 2022.')
     print('Source: Brå (The Swedish National Council for Crime Prevention)\n')
     get_user_data()
