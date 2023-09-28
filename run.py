@@ -25,7 +25,7 @@ def get_user_data():
     Get user input for year and crime offense
     """
     while True:
-        print('Enter the year or years you would like statistics for,')
+        print('Enter the year would like statistics for,')
         print('between the years 2012 - 2022')
         print('Example: 2019\n')
 
@@ -34,7 +34,7 @@ def get_user_data():
 
         if validate_year(input_year):
             print(
-                "\n You requierd the reported crime statistics"
+                "\nYou requierd the reported crime statistics"
                 f"for the year {input_year}.\n"
                 )
             print("Most reported crimes")
@@ -92,4 +92,23 @@ def validate_crime(input_crime):
         return False
 
 
-get_user_data()
+def statistics():
+    """
+    Gets the statistics the user requested.
+    """
+    w2018 = SHEET.worksheet(input_year)
+    col = []
+
+    if int(input_crime) < 10:
+        for ind in range(1, 2):
+            column = w2018.col_values(input_crime)
+            col.append(column)
+    else:
+        for ind in range(1, 10):
+            column = w2018.col_values(ind)
+            col.append(column)
+    
+    table = tabulate(col, tablefmt='simple_grid')
+    print(table)
+
+
