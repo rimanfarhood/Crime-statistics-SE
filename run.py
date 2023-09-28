@@ -113,11 +113,21 @@ def statistics():
     table = tabulate(col, tablefmt='simple_grid')
     print(table)
     
+
 def restart():
     """
     Gives the user option to restart for more
     statistics or to quit
     """
+
+    print('\nWould you like to search for more statistics, or exit?\n')
+    replay = input('Enter yes or exit:\n')
+
+    if replay == 'yes':
+        main()
+    else:
+        sys.exit('You exited program')
+
 
 
 def main():
@@ -129,6 +139,9 @@ def main():
     print('Source: Brå (The Swedish National Council for Crime Prevention)\n')
     get_user_data()
     statistics()
+    restart()
+    
 
     
 main()
+
