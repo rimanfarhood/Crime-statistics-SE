@@ -75,7 +75,21 @@ def validate_year(input_year):
         return False
 
 
-
+def validate_crime(input_crime):
+    """
+    Validates user input for offense 
+    """
+    try: 
+        crime_num = int(input_crime) 
+        if 1 <= crime_num <= 10: 
+            return True 
+        else: 
+            raise ValueError(
+                f"offense number: {crime_num},"
+                "Enter a number between 1 to 10.\n")
+    except ValueError as e: 
+        print(f"\nInvalid value {e}") 
+        return False
 
 
 get_user_data()
