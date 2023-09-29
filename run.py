@@ -129,7 +129,6 @@ def restart():
     return replay
     
 
-
 def validate_restart(replay):
     """
     Validates users data in the restart function.
@@ -146,7 +145,6 @@ def validate_restart(replay):
     except ValueError as e:
         print(f"Invalid value: {e}")
         return False
-
 
 
 def main():
