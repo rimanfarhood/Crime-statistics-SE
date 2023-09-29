@@ -46,8 +46,6 @@ def get_user_data():
                 global input_crime
                 input_crime = input('Enter offense number here:\n')
 
-                
-
                 if validate_crime(input_crime):
                     print(
                         'The requierd statistics for ' 
@@ -120,13 +118,34 @@ def restart():
     statistics or to quit
     """
 
-    print('\nWould you like to search for more statistics, or exit?\n')
-    replay = input('Enter yes or exit:\n')
+    while True:
+        print('\nWould you like to see more statistics, or exit?\n')
+        global replay
+        replay = input('Enter yes or exit:\n').lower()
 
-    if replay == 'yes':
-        main()
-    else:
-        sys.exit('You exited program')
+        if validate_restart(replay):
+            break
+
+    return replay
+    
+
+
+def validate_restart(replay):
+    """
+    Validates users data in the restart function.
+    """
+        
+    try:
+        if replay == 'yes':
+            main()
+            return True
+        elif replay == 'exit':
+            sys.exit('You exited program')
+        else:
+            raise ValueError(f'{replay} Please enter "yes" or "exit".')
+    except ValueError as e:
+        print(f"Invalid value: {e}")
+        return False
 
 
 
