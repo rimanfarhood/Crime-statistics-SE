@@ -16,10 +16,11 @@ SHEET = GSPREAD_CLIENT.open('Crime-statistics-Swe')
 
 offense = [
     'Total crimes reported', 'Violent crime',
-    'Cyber crime', 'Sexual offenses','Vandalism',
+    'Cyber crime', 'Sexual offenses', 'Vandalism',
     'Drug offenses', 'Fraud etc', 'Violation of freedom',
     "Theft, robbery etc", 'All offenses'
     ]
+
 
 def get_user_data():
     """
@@ -34,27 +35,29 @@ def get_user_data():
 
         if validate_year(input_year):
             print(f"\nYou requierd the statistics for: {input_year}")
-            print("Select the number of offense you would like statistics for.\n")
+            print(
+                "Select the number of offense"
+                "you would like statistics for.\n"
+                )
             print("The most reported crimes:")
 
             for index, item in enumerate(offense, start=1):
                 print(f"{index}. {item}")
-            
+
             print('\nExample: 7')
-            
+
             while True:
                 global input_crime
                 input_crime = input('Enter offense number here:\n')
 
                 if validate_crime(input_crime):
                     print(
-                        'The requierd statistics for ' 
+                        'The requierd statistics for '
                         f'{offense[(int(input_crime)) - 1]} {input_year}'
                         )
                     break
 
             return input_crime
-    return input_year
 
 
 def validate_year(input_year):
@@ -62,12 +65,12 @@ def validate_year(input_year):
     Validates user input for year.
     """
     try:
-        year = int(input_year) 
-        if 2012 <= year <= 2022: 
+        year = int(input_year)
+        if 2012 <= year <= 2022:
             return True
         else:
             raise ValueError(
-                f"{year} is invaild, enter" 
+                f"{year} is invaild, enter "
                 "a year between 2012 and 2022.\n"
                 )
     except ValueError as e:
@@ -77,18 +80,18 @@ def validate_year(input_year):
 
 def validate_crime(input_crime):
     """
-    Validates user input for offense 
+    Validates user input for offense
     """
-    try: 
-        crime_num = int(input_crime) 
-        if 1 <= crime_num <= 10: 
-            return True 
-        else: 
+    try:
+        crime_num = int(input_crime)
+        if 1 <= crime_num <= 10:
+            return True
+        else:
             raise ValueError(
                 f"offense number: {crime_num},"
                 "Enter a number between 1 to 10.\n")
-    except ValueError as e: 
-        print(f"\nInvalid value {e}") 
+    except ValueError as e:
+        print(f"\nInvalid value {e}")
         return False
 
 
@@ -107,10 +110,10 @@ def statistics():
         for ind in range(1, 10):
             column = w2018.col_values(ind)
             col.append(column)
-    
+
     table = tabulate(col, tablefmt='simple_grid')
     print(table)
-    
+
 
 def restart():
     """
@@ -127,13 +130,13 @@ def restart():
             break
 
     return replay
-    
+
 
 def validate_restart(replay):
     """
     Validates users data in the restart function.
     """
-        
+
     try:
         if replay == 'yes':
             main()
@@ -157,8 +160,6 @@ def main():
     get_user_data()
     statistics()
     restart()
-    
 
-    
+
 main()
-
