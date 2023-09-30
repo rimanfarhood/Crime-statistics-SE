@@ -1,7 +1,8 @@
+"""Module providing a function printing python version."""
+import sys
 import gspread
 from google.oauth2.service_account import Credentials
 from tabulate import tabulate
-import sys
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -21,6 +22,10 @@ offense = [
     "Theft, robbery etc", 'All offenses'
     ]
 
+input_year = None
+input_crime = None
+replay = None
+
 
 def get_user_data():
     """
@@ -34,7 +39,7 @@ def get_user_data():
         input_year = input("Enter year here:\n")
 
         if validate_year(input_year):
-            print(f"\nYou requierd the statistics for: {input_year}")
+            print(f"\nYou required the statistics for: {input_year}")
             print(
                 "Select the number of offense"
                 "you would like statistics for.\n"
@@ -52,7 +57,7 @@ def get_user_data():
 
                 if validate_crime(input_crime):
                     print(
-                        'The requierd statistics for '
+                        'The required statistics for '
                         f'{offense[(int(input_crime)) - 1]} {input_year}'
                         )
                     break
@@ -60,7 +65,7 @@ def get_user_data():
             return input_crime
 
 
-def validate_year(input_year):
+def validate_year(year):
     """
     Validates user input for year.
     """
@@ -70,7 +75,7 @@ def validate_year(input_year):
             return True
         else:
             raise ValueError(
-                f"{year} is invaild, enter "
+                f"{year} is invalid, enter "
                 "a year between 2012 and 2022.\n"
                 )
     except ValueError as e:
@@ -78,17 +83,17 @@ def validate_year(input_year):
         return False
 
 
-def validate_crime(input_crime):
+def validate_crime(crime):
     """
     Validates user input for offense
     """
     try:
-        crime_num = int(input_crime)
-        if 1 <= crime_num <= 10:
+        crime = int(input_crime)
+        if 1 <= crime <= 10:
             return True
         else:
             raise ValueError(
-                f"offense number: {crime_num},"
+                f"offense number: {crime},"
                 "Enter a number between 1 to 10.\n")
     except ValueError as e:
         print(f"\nInvalid value {e}")
@@ -132,16 +137,16 @@ def restart():
     return replay
 
 
-def validate_restart(replay):
+def validate_restart(data):
     """
     Validates users data in the restart function.
     """
 
     try:
-        if replay == 'yes':
+        if data == 'yes':
             main()
             return True
-        elif replay == 'exit':
+        elif data == 'exit':
             sys.exit('You exited program')
         else:
             raise ValueError(f'{replay} Please enter "yes" or "exit".')
