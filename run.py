@@ -32,7 +32,10 @@ def get_user_data():
     Get user input for year and crime offense
     """
     while True:
-        print('Enter the year would like statistics for, between 2012 - 2022.')
+        print(
+            "Enter the year you would like statistics for "
+            'between 2012 - 2022.'
+            )
         print('Example: 2019\n')
 
         global input_year
@@ -41,7 +44,7 @@ def get_user_data():
         if validate_year(input_year):
             print(f"\nYou required the statistics for: {input_year}")
             print(
-                "Select the number of offense"
+                "Select the number of offense "
                 "you would like statistics for.\n"
                 )
             print("The most reported crimes:")
