@@ -104,16 +104,16 @@ def statistics():
     """
     Gets the statistics the user requested.
     """
-    w2018 = SHEET.worksheet(input_year)
+    sheet_year = SHEET.worksheet(input_year)
     col = []
 
     if int(input_crime) < 10:
         for ind in range(1, 2):
-            column = w2018.col_values(input_crime)
+            column = sheet_year.col_values(input_crime)
             col.append(column)
     else:
         for ind in range(1, 10):
-            column = w2018.col_values(ind)
+            column = sheet_year.col_values(ind)
             col.append(column)
 
     table = tabulate(col, tablefmt='simple_grid')
