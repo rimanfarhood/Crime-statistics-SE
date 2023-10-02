@@ -267,6 +267,7 @@ Where the user won’t have to go through a long process to access the statistic
     - sys - to add the exit option
     - gspread - API
     - google-auth - authentication mechanisms to access Google APIs
+- Brå (The Swedish National Council for Crime Prevention) - to get the statistics
 
 
 ## Deployment
@@ -299,6 +300,6 @@ In Heroku
 
 ## Credits
 
-- Lms - Love Sandwiches both help and inspiration 
+- Lms - Love Sandwiches both help and inspiration
 
 
