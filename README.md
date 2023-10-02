@@ -242,3 +242,8 @@ Where the user won’t have to go through a long process to access the statistic
 
 - Offense nr 10 all years
 
+![test 10](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/input10.jpeg)
+
+#### Pep8
+- No errors or warnings
+![pep8](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/pep8.png)
