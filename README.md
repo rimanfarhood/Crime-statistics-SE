@@ -1,6 +1,6 @@
 # Crime Statistics SE
 
-![https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/crimestats.gif]
+![gif](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/crimestats.gif)
 
 This project is for students, reporters, ​​authorities or anyone who is curious about Sweden's crime rates.
 
@@ -22,7 +22,7 @@ Where the user won’t have to go through a long process to access the statistic
     - Asks the user to input a year of choice in the within the specified range, gives user an example too.
     - When the user enters a valid year, a menu of offense selection will be displayed.
 
-![https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/start.png]
+![start](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/start.png)
 
 ### Menu of offense selection
 
@@ -31,7 +31,7 @@ Where the user won’t have to go through a long process to access the statistic
     - User is asked to input the offense number they want statistics for.
     - When user input their choice a table of the statistic will be displayed.
 
-![https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/menu.png]
+![menu](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/menu.png)
 
 ### Statistic
 
@@ -39,7 +39,7 @@ Where the user won’t have to go through a long process to access the statistic
 
     - User will be asked if they would like to see more statistics or exit.
 
-![https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/stats.png]
+![statistic](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/stats.png)
 
 ### End
 
@@ -48,8 +48,8 @@ Where the user won’t have to go through a long process to access the statistic
     - If the user input yes the program will start from beginning.
     - If user input exit the program will stop running.
 
-![https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/end.png]
+![end](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/end.png)
 
-![https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/restart.png]
+![restart](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/restart.png)
 
-![https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/exit.png]
+![exit](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/exit.png)
