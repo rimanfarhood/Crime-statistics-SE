@@ -56,18 +56,204 @@ Where the user won’t have to go through a long process to access the statistic
 
 ## Logical Flow
 
-![flow]
+![flow]()
 
 ## Testing
 
-| Testing purpose                                                                                 | Action                                                                                                 | Expected                                                                            | Result |
-| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ------ |
-| Input validations:                                                                              |                                                                                                        |                                                                                     |        |
-| Input_year in get_user_data: If error display's to user when input invalid data                 | When asked for a year in range 2012-2022: Input string, special character and a year outside the range | Display error and ask user for a valid input again                                  | PASS   |
-| Input_year in get_user_data: Statistics menu is displayed and user gets asked to input offense  | Input "2015" when asked to input year                                                                  | Display statistics menu and ask user to input offense number.                       | PASS   |
-| input_crime in get_user_data: If error is displayed to user when input invalid                  | Input '11', empty space, and string when asked to input offense number in range 1-10                  | Error is displayed and user is asked to input a valid data                          | PASS   |
-| Display the correct statistics the user requested when input_crime valid                        | input '7' when asked to input offense number form the menu                                             | Display the correct statistics data to user                                         | PASS   |
-| Replay in restart function is displayed when input valid year and offense number                | Input '2015' when asked to input year followed by '7' for offense number                               | Display the requested statistic and ask user if they want to see more stats or exit | PASS   |
-| Error is displayed when replay input invalid in restart function                                | Input number, special character when asked to yes or exit                                              | Display error and ask user to input valid data                                      | PASS   |
-| Replay in restart function: Program is exited when user input exit                              | Input 'exit' when asked to input yes or exit                                                           | Exit program and display 'You exited program'                                       | PASS   |
-| Replay in restart function: Program starts from beginning when user input yes to see more stats | Input 'yes' when asked to input yes or exit                                                            | Program starts from beginning again                                                 | PASS   |
+|Testing purpose                                                                                |Action                                                                                                |Expected                                                                           |Result|
+|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|------|
+|Input validations:                                                                             |                                                                                                      |                                                                                   |      |
+|Input_year in get_user_data: If error display's to user when input invalid data                |When asked for a year in range 2012-2022: Input string, special character and a year outside the range|Display error and ask user for a valid input again                                 |PASS  |
+|Input_year in get_user_data: Statistics menu is displayed and user gets asked to input offense |Input "2015" when asked to input year                                                                 |Display statistics menu and ask user to input offense number.                      |PASS  |
+|input_crime in get_user_data: If error is displayed to user when input invalid                 |Input '11', empty space, and string when asked to input offense number in range 1-10                 |Error is displayed and user is asked to input a valid data                         |PASS  |
+|Display the correct statistics the user requested when input_crime valid                       |input '7' when asked to input offense number form the menu                                            |Display the correct statistics data to user                                        |PASS  |
+|Replay in restart function is displayed when input valid year and offense number               |Input '2015' when asked to input year followed by '7' for offense number                              |Display the requested statistic and ask user if they want to see more stats or exit|PASS  |
+|Error is displayed when replay input invalid in restart function                               |Input number, special character when asked to yes or exit                                             |Display error and ask user to input valid data                                     |PASS  |
+|Replay in restart function: Program is exited when user input exit                             |Input 'exit' when asked to input yes or exit                                                          |Exit program and display 'You exited program'                                      |PASS  |
+|Replay in restart function: Program starts from beginning when user input yes to see more stats|Input 'yes' when asked to input yes or exit                                                           |Program starts from beginning again                                                |PASS  |
+
+#### Testing all input values are correct
+
+- Offense nr 1 all years
+
+|Testing                                                         |Action                                          |Expected                                                      |Result|
+|----------------------------------------------------------------|------------------------------------------------|--------------------------------------------------------------|------|
+|correct stats displayed when user input x year and offense nr x:|Input year x and offense nr x                   |Display a table of The required statistics for x reported year|      |
+|                                                                |                                                |                                                              |      |
+|                                                                |input 2012 for year followed by offense number 1|Total Reported Crimes 2012│ 1 402 588                         |PASS  |
+|                                                                |input 2013 for year followed by offense number 1 |Total Reported Crimes 2013│ 1 401 982                         |PASS  |
+|                                                                |input 2014 for year followed by offense number 1|Total Reported Crimes 2014│ 1 443 753                         |PASS  |
+|                                                                |input 2015 for year followed by offense number 1|Total Reported Crimes 2015│ 1 503 399                         |PASS  |
+|                                                                |input 2016 for year followed by offense number 1|Total Reported Crimes 2016│ 1 510 197                         |PASS  |
+|                                                                |input 2017 for year followed by offense number 1|Total Reported Crimes 2017│1 514 902                          |PASS  |
+|                                                                |input 2018 for year followed by offense number 1|Total Reported Crimes 2018│1 550 626                          |PASS  |
+|                                                                |input 2019 for year followed by offense number 1|Total Reported Crimes 2019│1 548 406                          |PASS  |
+|                                                                |input 2020 for year followed by offense number 1|Total Reported Crimes 2020│1 566 872                          |PASS  |
+|                                                                |input 2021 for year followed by offense number 1|Total Reported Crimes 2021│1 480 557                          |PASS  |
+|                                                                |input 2022 for year followed by offense number 1|Total Reported Crimes 2022│1 447 470                          |PASS  |
+
+
+- Offense nr 2 All years
+
+|Testing                                                         |Action                                          |Expected                                                      |Result|
+|----------------------------------------------------------------|------------------------------------------------|--------------------------------------------------------------|------|
+|correct stats displayed when user input x year and offense nr x:|Input year x and offense nr x                   |Display a table of The required statistics for x reported year|      |
+|                                                                |                                                |                                                              |      |
+|                                                                |input 2012 for year followed by offense number 2|Violent crime│ 92 465                                         |PASS  |
+|                                                                |input 2013 for year followed by offense number 2 |Violent crime│ 85 692                                         |PASS  |
+|                                                                |input 2014 for year followed by offense number 2|Violent crime│ 89 159                                          |PASS  |
+|                                                                |input 2015 for year followed by offense number 2|Violent crime│ 90 994                                          |PASS  |
+|                                                                |input 2016 for year followed by offense number 2|Violent crime│ 94 602                                          |PASS  |
+|                                                                |input 2017 for year followed by offense number 2|Violent crime│ 90 688                                          |PASS  |
+|                                                                |input 2018 for year followed by offense number 2|Violent crime│ 89 853                                          |PASS  |
+|                                                                |input 2019 for year followed by offense number 2|Violent crime│ 91 020                                          |PASS  |
+|                                                                |input 2020 for year followed by offense number 2|Violent crime│ 89 672                                          |PASS  |
+|                                                                |input 2021 for year followed by offense number 2|Violent crime│ 89 072                                          |PASS  |
+|                                                                |input 2022 for year followed by offense number 2|Violent crime│ 90 369                                          |PASS  |
+
+- Offense nr 3 all years
+
+|Testing                                                         |Action                                          |Expected                                                      |Result|
+|----------------------------------------------------------------|------------------------------------------------|--------------------------------------------------------------|------|
+|correct stats displayed when user input x year and offense nr x:|Input year x and offense nr x                   |Display a table of The required statistics for x reported year|      |
+|                                                                |                                                |                                                              |      |
+|                                                                |input 2012 for year followed by offense number 3|Cyber crime │ 8 646                                           |PASS  |
+|                                                                |input 2013 for year followed by offense number 3|Cyber crime │ 11 010                                          |PASS  |
+|                                                                |input 2014 for year followed by offense number 3|Cyber crime │8 200                                            |PASS  |
+|                                                                |input 2015 for year followed by offense number 3|Cyber crime │6 663                                            |PASS  |
+|                                                                |input 2016 for year followed by offense number 3|Cyber crime │7 553                                            |PASS  |
+|                                                                |input 2017 for year followed by offense number 3|Cyber crime │7 058                                            |PASS  |
+|                                                                |input 2018 for year followed by offense number 3|Cyber crime │8 827                                            |PASS  |
+|                                                                |input 2019 for year followed by offense number 3|Cyber crime │9 052                                            |PASS  |
+|                                                                |input 2020 for year followed by offense number 3|Cyber crime │8 949                                            |PASS  |
+|                                                                |input 2021 for year followed by offense number 3|Cyber crime │11 566                                           |PASS  |
+|                                                                |input 2022 for year followed by offense number 3|Cyber crime │ 9 299                                           |PASS  |
+
+- Offense nr 4 all years
+
+|Testing                                                         |Action                                          |Expected                                                      |Result|
+|----------------------------------------------------------------|------------------------------------------------|--------------------------------------------------------------|------|
+|correct stats displayed when user input x year and offense nr x:|Input year x and offense nr x                   |Display a table of The required statistics for x reported year|      |
+|                                                                |                                                |                                                              |      |
+|                                                                |input 2012 for year followed by offense number 4|Sexual offenses│ 16 923                                       |PASS  |
+|                                                                |input 2013 for year followed by offense number 4|Sexual offenses │ 17 704                                      |PASS  |
+|                                                                |input 2014 for year followed by offense number 4|Sexual offenses │ 20 326                                      |PASS  |
+|                                                                |input 2015 for year followed by offense number 4|Sexual offenses │ 18 057                                      |PASS  |
+|                                                                |input 2016 for year followed by offense number 4|Sexual offenses │ 20 284                                      |PASS  |
+|                                                                |input 2017 for year followed by offense number 4|Sexual offenses │ 21 991                                      |PASS  |
+|                                                                |input 2018 for year followed by offense number 4|Sexual offenses │ 22 476                                      |PASS  |
+|                                                                |input 2019 for year followed by offense number 4|Sexual offenses │ 23 197                                      |PASS  |
+|                                                                |input 2020 for year followed by offense number 4|Sexual offenses │ 25 030                                      |PASS  |
+|                                                                |input 2021 for year followed by offense number 4|Sexual offenses │ 27 639                                      |PASS  |
+|                                                                |input 2022 for year followed by offense number 4|Sexual offenses │ 24 656                                      |PASS  |
+
+- Offense nr 5 all years
+
+|Testing                                                         |Action                                          |Expected                                                      |Result|
+|----------------------------------------------------------------|------------------------------------------------|--------------------------------------------------------------|------|
+|correct stats displayed when user input x year and offense nr x:|Input year x and offense nr x                   |Display a table of The required statistics for x reported year|      |
+|                                                                |                                                |                                                              |      |
+|                                                                |input 2012 for year followed by offense number 5|Vandalism │ 152 345                                           |PASS  |
+|                                                                |input 2013 for year followed by offense number 5 |Vandalism │ 141 144                                           |PASS  |
+|                                                                |input 2014 for year followed by offense number 5|Vandalism │ 151 207                                           |PASS  |
+|                                                                |input 2015 for year followed by offense number 5|Vandalism │ 194 905                                           |PASS  |
+|                                                                |input 2016 for year followed by offense number 5|Vandalism │ 194 594                                           |PASS  |
+|                                                                |input 2017 for year followed by offense number 5|Vandalism │ 180 907                                           |PASS  |
+|                                                                |input 2018 for year followed by offense number 5|Vandalism │ 189 356                                           |PASS  |
+|                                                                |input 2019 for year followed by offense number 5|Vandalism │ 204 562                                           |PASS  |
+|                                                                |input 2020 for year followed by offense number 5|Vandalism │ 233 610                                           |PASS  |
+|                                                                |input 2021 for year followed by offense number 5|Vandalism │ 221 039                                           |PASS  |
+|                                                                |input 2022 for year followed by offense number 5|Vandalism │ 211 366                                           |PASS  |
+
+
+- Offense nr 6 all years
+
+|Testing                                                         |Action                                          |Expected                                                      |Result|
+|----------------------------------------------------------------|------------------------------------------------|--------------------------------------------------------------|------|
+|correct stats displayed when user input x year and offense nr x:|Input year x and offense nr x                   |Display a table of The required statistics for x reported year|      |
+|                                                                |                                                |                                                              |      |
+|                                                                |input 2012 for year followed by offense number 6|Drug offenses │ 94 602                                        |PASS  |
+|                                                                |input 2013 for year followed by offense number 6|Drug offenses │ 96 178                                        |PASS  |
+|                                                                |input 2014 for year followed by offense number 6|Drug offenses │ 95 324                                        |PASS  |
+|                                                                |input 2015 for year followed by offense number 6|Drug offenses │ 94 035                                        |PASS  |
+|                                                                |input 2016 for year followed by offense number 6|Drug offenses │ 90 883                                        |PASS  |
+|                                                                |input 2017 for year followed by offense number 6|Drug offenses │ 100 447                                       |PASS  |
+|                                                                |input 2018 for year followed by offense number 6|Drug offenses │ 106 521                                       |PASS  |
+|                                                                |input 2019 for year followed by offense number 6|Drug offenses │ 113 071                                       |PASS  |
+|                                                                |input 2020 for year followed by offense number 6|Drug offenses │ 124 044                               |PASS  |
+|                                                                |input 2021 for year followed by offense number 6|Drug offenses │ 118 105                                       |PASS  |
+|                                                                |input 2022 for year followed by offense number 6|Drug offenses │ 113 475                                       |PASS  |
+
+
+- Offense nr 7 all years
+
+| Testing                                                          | Action                                           | Expected                                                       | Result |
+| ---------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------- | ------ |
+| correct stats displayed when user input x year and offense nr x: | Input year x and offense nr x                    | Display a table of The required statistics for x reported year |        |
+|                                                                  |                                                  |                                                                |        |
+|                                                                  | input 2012 for year followed by offense number 7 | Fraud etc │ 129 063                                            | PASS   |
+|                                                                  | input 2013 for year followed by offense number 7  | Fraud etc │ 148 362                                            | PASS   |
+|                                                                  | input 2014 for year followed by offense number 7 | Fraud etc │ 156 087                                            | PASS   |
+|                                                                  | input 2015 for year followed by offense number 7 | Fraud etc │ 185 781                                            | PASS   |
+|                                                                  | input 2016 for year followed by offense number 7 | Fraud etc │ 205 103                                            | PASS   |
+|                                                                  | input 2017 for year followed by offense number 7 | Fraud etc │ 208 688                                            | PASS   |
+|                                                                  | input 2018 for year followed by offense number 7 | Fraud etc │ 260 260                                            | PASS   |
+|                                                                  | input 2019 for year followed by offense number 7 | Fraud etc │ 244 696                                            | PASS   |
+|                                                                  | input 2020 for year followed by offense number 7 | Fraud etc │ 218 308                                            | PASS   |
+|                                                                  | input 2021 for year followed by offense number 7 | Fraud etc │ 195 902                                            | PASS   |
+|                                                                  | input 2022 for year followed by offense number 7 | Fraud etc │ 195 929                                            | PASS   |
+
+- Offense nr 8 all years
+
+| Testing                                                          | Action                                           | Expected                                                       | Result |
+| ---------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------- | ------ |
+| correct stats displayed when user input x year and offense nr x: | Input year x and offense nr x                    | Display a table of The required statistics for x reported year |        |
+|                                                                  |                                                  |                                                                |        |
+|                                                                  | input 2012 for year followed by offense number 8 | Violation of freedom│ 130 883                                  | PASS   |
+|                                                                  | input 2013 for year followed by offense number 8  | Violation of freedom│ 131 556                                  | PASS   |
+|                                                                  | input 2014 for year followed by offense number 8 | Violation of freedom│ 135 389                                  | PASS   |
+|                                                                  | input 2015 for year followed by offense number 8 | Violation of freedom│ 134 710                                  | PASS   |
+|                                                                  | input 2016 for year followed by offense number 8 | Violation of freedom│ 146 982                                  | PASS   |
+|                                                                  | input 2017 for year followed by offense number 8 | Violation of freedom│ 160 457                                  | PASS   |
+|                                                                  | input 2018 for year followed by offense number 8 | Violation of freedom│ 164 330                                  | PASS   |
+|                                                                  | input 2019 for year followed by offense number 8 | Violation of freedom│ 164 049                                  | PASS   |
+|                                                                  | input 2020 for year followed by offense number 8 | Violation of freedom│ 170 069                                  | PASS   |
+|                                                                  | input 2021 for year followed by offense number 8 | Violation of freedom│ 173 799                                  | PASS   |
+|                                                                  | input 2022 for year followed by offense number 8 | Violation of freedom│160 582                                   | PASS   |
+
+- Offense nr 9 all years
+
+| Testing                                                          | Action                                           | Expected                                                       | Result |
+| ---------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------- | ------ |
+| correct stats displayed when user input x year and offense nr x: | Input year x and offense nr x                    | Display a table of The required statistics for x reported year |        |
+|                                                                  |                                                  |                                                                |        |
+|                                                                  | input 2012 for year followed by offense number 9 | Theft, robbery, etc │ 534 278                                  | PASS   |
+|                                                                  | input 2013 for year followed by offense number 9  | Theft, robbery, etc │ 533 041                                  | PASS   |
+|                                                                  | input 2014 for year followed by offense number 9 | Theft, robbery, etc │ 540 226                                  | PASS   |
+|                                                                  | input 2015 for year followed by offense number 9 | Theft, robbery, etc │ 529 563                                  | PASS   |
+|                                                                  | input 2016 for year followed by offense number 9 | Theft, robbery, etc │ 503 542                                  | PASS   |
+|                                                                  | input 2017 for year followed by offense number 9 | Theft, robbery, etc │ 486 410                                  | PASS   |
+|                                                                  | input 2018 for year followed by offense number 9 | Theft, robbery, etc │ 445 045                                  | PASS   |
+|                                                                  | input 2019 for year followed by offense number 9 | Theft, robbery, etc │ 435 962                                  | PASS   |
+|                                                                  | input 2020 for year followed by offense number 9 | Theft, robbery, etc │ 421 495                                  | PASS   |
+|                                                                  | input 2021 for year followed by offense number 9 | Theft, robbery, etc │ 388 198                                  | PASS   |
+|                                                                  | input 2022 for year followed by offense number 9 | Theft, robbery, etc │ 382 744                                  | PASS   |
+
+
+- Offense nr 10 all years
+
+| Testing                                                          | Action                                            | Expected                                                                                                                                                                                                                                                         | Result |
+| ---------------------------------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| correct stats displayed when user input x year and offense nr x: | Input year x and offense nr x                     | Display a table of statistics for ALL reported offenses year x                                                                                                                                                                                                   |        |
+|                                                                  |                                                   |                                                                                                                                                                                                                                                                  |        |
+|                                                                  | input 2012 for year followed by offense number 10 | Total Reported Crimes 2012| 1 402 588<br>Violent crime| 92 465<br>Cyber crime| 8 646<br>Sexual offenses| 16 923<br>Vandalism| 152 345<br>Drug offenses| 94 602<br>Fraud etc| 129 063<br>Violation of freedom| 130 883<br>Theft, robbery, etc| 534 278            | PASS   |
+|                                                                  | input 2013 for year followed by offense number 10  | Total Reported Crimes 2013| 1 401 982<br>Violent crime| 85 692<br>Cyber crime| 11 010<br>Sexual offenses| 17 704<br>Vandalism| 141 144<br>Drug offenses| 96 178<br>Fraud etc| 148 362<br>Violation of freedom| 131 556<br>Theft, robbery, etc| 533 041           | PASS   |
+|                                                                  | input 2014 for year followed by offense number 10 | Total Reported Crimes 2014| 1 443 753<br>Violent crime | 89 159<br>Cyber crime |8 200<br>Sexual offenses | 20 326<br>Vandalism | 151 207<br>Drug offenses | 95 324<br>Fraud etc | 156 087<br>Violation of freedom | 135 389<br>Theft, robbery, etc | 540 226     | PASS   |
+|                                                                  | input 2015 for year followed by offense number 10 | Total Reported Crimes 2015 | 1 503 399<br>Violent crime | 90 994<br>Cyber crime | 6 663<br>Sexual offenses | 18 057<br>Vandalism | 194 905<br>Drug offenses | 94 035<br>Fraud etc | 185 781<br>Violation of freedom | 134 710<br>Theft, robbery, etc | 529 563   | PASS   |
+|                                                                  | input 2016 for year followed by offense number 10 | Total Reported Crimes 2016 | 1 510 197<br>Violent crime | 94 602<br>Cyber crime | 7 553<br>Sexual offenses | 20 284<br>Vandalism | 194 594<br>Drug offenses | 90 883<br>Fraud etc | 205 103<br>Violation of freedom | 146 982<br>Theft, robbery, etc | 503 542   | PASS   |
+|                                                                  | input 2017 for year followed by offense number 10 | Total Reported Crimes 2017 | 1 514 902<br>Violent crime | 90 688<br>Cyber crime | 7 058<br>Sexual offenses | 21 991<br>Vandalism | 180 907<br>Drug offenses | 100 447<br>Fraud etc | 208 688<br>Violation of freedom | 160 457<br>Theft, robbery, etc | 486 410  | PASS   |
+|                                                                  | input 2018 for year followed by offense number 10 | Total Reported Crimes 2018 | 1 550 626<br>Violent crime | 89 853<br>Cyber crime | 8 827<br>Sexual offenses | 22 476<br>Vandalism | 189 356<br>Drug offenses | 106 521<br>Fraud etc | 260 260<br>Violation of freedom | 164 330<br>Theft, robbery, etc | 445 045  | PASS   |
+|                                                                  | input 2019 for year followed by offense number 10 | Total Reported Crimes 2019 | 1 548 406<br>Violent crime | 91 020<br>Cyber crime | 9 052<br>Sexual offenses | 23 197<br>Vandalism | 204 562<br>Drug offenses | 113 071<br>Fraud etc | 244 696<br>Violation of freedom | 164 049<br>Theft, robbery, etc | 435 962  | PASS   |
+|                                                                  | input 2020 for year followed by offense number 10 | Total Reported Crimes 2020 | 1 566 872<br>Violent crime | 89 672<br>Cyber crime | 8 949<br>Sexual offenses | 25 030<br>Vandalism | 233 610<br>Drug offenses | 124 044<br>Fraud etc | 218 308<br>Violation of freedom | 170 069<br>Theft, robbery, etc | 421 495  | PASS   |
+|                                                                  | input 2021 for year followed by offense number 10 | Total Reported Crimes 2021 | 1 480 557<br>Violent crime | 89 072<br>Cyber crime | 11 566<br>Sexual offenses | 27 639<br>Vandalism | 221 039<br>Drug offenses | 118 105<br>Fraud etc | 195 902<br>Violation of freedom | 173 799<br>Theft, robbery, etc | 388 198 | PASS   |
+|                                                                  | input 2022 for year followed by offense number 10 | Total Reported Crimes 2022 | 1 447 470<br>Violent crime | 90 369<br>Cyber crime | 9 299<br>Sexual offenses | 24 656<br>Vandalism | 211 366<br>Drug offenses | 113 475<br>Fraud etc | 195 929<br>Violation of freedom | 160 582<br>Theft, robbery, etc | 382 744  | PASS   |
