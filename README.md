@@ -53,3 +53,21 @@ Where the user won’t have to go through a long process to access the statistic
 ![restart](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/restart.png)
 
 ![exit](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/exit.png)
+
+## Logical Flow
+
+![flow]
+
+## Testing
+
+| Testing purpose                                                                                 | Action                                                                                                 | Expected                                                                            | Result |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ------ |
+| Input validations:                                                                              |                                                                                                        |                                                                                     |        |
+| Input_year in get_user_data: If error display's to user when input invalid data                 | When asked for a year in range 2012-2022: Input string, special character and a year outside the range | Display error and ask user for a valid input again                                  | PASS   |
+| Input_year in get_user_data: Statistics menu is displayed and user gets asked to input offense  | Input "2015" when asked to input year                                                                  | Display statistics menu and ask user to input offense number.                       | PASS   |
+| input_crime in get_user_data: If error is displayed to user when input invalid                  | Input '11', empty space, and string when asked to input offense number in range 1-10                  | Error is displayed and user is asked to input a valid data                          | PASS   |
+| Display the correct statistics the user requested when input_crime valid                        | input '7' when asked to input offense number form the menu                                             | Display the correct statistics data to user                                         | PASS   |
+| Replay in restart function is displayed when input valid year and offense number                | Input '2015' when asked to input year followed by '7' for offense number                               | Display the requested statistic and ask user if they want to see more stats or exit | PASS   |
+| Error is displayed when replay input invalid in restart function                                | Input number, special character when asked to yes or exit                                              | Display error and ask user to input valid data                                      | PASS   |
+| Replay in restart function: Program is exited when user input exit                              | Input 'exit' when asked to input yes or exit                                                           | Exit program and display 'You exited program'                                       | PASS   |
+| Replay in restart function: Program starts from beginning when user input yes to see more stats | Input 'yes' when asked to input yes or exit                                                            | Program starts from beginning again                                                 | PASS   |
