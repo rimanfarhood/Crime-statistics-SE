@@ -1,6 +1,6 @@
 # Crime Statistics SE
 
-![
+![https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/crimestats.gif]
 
 This project is for students, reporters, ​​authorities or anyone who is curious about Sweden's crime rates.
 
