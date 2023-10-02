@@ -12,4 +12,8 @@ The goal is to provide easily accessible crime statistics,
 source: Brå (The Swedish National Council for Crime Prevention).
 Where the user won’t have to go through a long process to access the statistics.
 
+## Features
+
+
+
 
