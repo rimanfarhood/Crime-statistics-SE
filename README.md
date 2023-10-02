@@ -267,3 +267,38 @@ Where the user won’t have to go through a long process to access the statistic
     - sys - to add the exit option
     - gspread - API
     - google-auth - authentication mechanisms to access Google APIs
+
+
+## Deployment
+
+- Steps
+Before deploying to Heroku
+
+1. Add list of dependencies to the requirements.txt file
+   - To create list use this command in terminal: 'pip3 > freeze requirements.txt' and the list will be added.
+   - Commit and push
+
+In Heroku
+
+- In dashboard Click 'Create new app'
+- Name app and choose region, click create
+- Go to settings then to config vars
+    - Click on 'Reveal config vars'
+        - Key: CREDS Values: copy your creds.json file and paste it
+        - Then Add
+        - Add another one, Key: PORT Values: 8000
+- Click on 'Add buildpack'
+    - select python and save changes
+    - add one more select nodejs and save again
+    - make sure python comes first
+- Go to deploy and select github and confirm
+- search for repository
+- click on connect
+- select a deployment method
+- deploy!
+
+## Credits
+
+- Lms - Love Sandwiches both help and inspiration 
+
+
