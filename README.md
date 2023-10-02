@@ -56,9 +56,9 @@ Where the user won’t have to go through a long process to access the statistic
 
 ## Logical Flow
 
-![flow]()
+![flow](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/flow.png)
 
-## Testing
+## Manual Testing
 
 |Testing purpose                                                                                |Action                                                                                                |Expected                                                                           |Result|
 |-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|------|
@@ -257,3 +257,4 @@ Where the user won’t have to go through a long process to access the statistic
 |                                                                  | input 2020 for year followed by offense number 10 | Total Reported Crimes 2020 | 1 566 872<br>Violent crime | 89 672<br>Cyber crime | 8 949<br>Sexual offenses | 25 030<br>Vandalism | 233 610<br>Drug offenses | 124 044<br>Fraud etc | 218 308<br>Violation of freedom | 170 069<br>Theft, robbery, etc | 421 495  | PASS   |
 |                                                                  | input 2021 for year followed by offense number 10 | Total Reported Crimes 2021 | 1 480 557<br>Violent crime | 89 072<br>Cyber crime | 11 566<br>Sexual offenses | 27 639<br>Vandalism | 221 039<br>Drug offenses | 118 105<br>Fraud etc | 195 902<br>Violation of freedom | 173 799<br>Theft, robbery, etc | 388 198 | PASS   |
 |                                                                  | input 2022 for year followed by offense number 10 | Total Reported Crimes 2022 | 1 447 470<br>Violent crime | 90 369<br>Cyber crime | 9 299<br>Sexual offenses | 24 656<br>Vandalism | 211 366<br>Drug offenses | 113 475<br>Fraud etc | 195 929<br>Violation of freedom | 160 582<br>Theft, robbery, etc | 382 744  | PASS   |
+
