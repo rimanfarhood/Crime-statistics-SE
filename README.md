@@ -56,7 +56,7 @@ Where the user won’t have to go through a long process to access the statistic
 
 ### Features left to implement
 
-- If I had more time I would make it possible for the user to request more than one statistic. E.g they want to compare the statistics for 'Sexual Offenses' the past ten years, they could request the statistic for 'Sexual Offenses' for the past ten years and get a table. Now the user would have to request each year separately and put together their own table. 
+- If I had more time I would make it possible for the user to request more than one statistic. E.g they want to compare the statistics for 'Sexual Offenses' the past ten years, they could request the statistic for 'Sexual Offenses' for the past ten years and get a table. Now the user would have to request each year separately and put together their own table.
 ## Logical Flow
 
 ![flow](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/flow.png)
@@ -258,7 +258,12 @@ Where the user won’t have to go through a long process to access the statistic
 - Python - Language To build the application
 - Google Sheets - To store the statistics
 - Google Cloud - To access the data in Google Sheets
-- Lucidchart - To convert Google Sheets tables to markdown
+- Lucidchart - To make the flowchart
+- Tabletomarkdown.com - To convert Google Sheets tables to markdown
 - Chrome extension Screen Recorder - To screen recorder the gif for README
 - Ezgif.com - To convert the video to gif
 - Heroku - Used to deploy the project
+- Python - Modules
+    - sys - to add the exit option
+    - gspread - API
+    - google-auth - authentication mechanisms to access Google APIs
