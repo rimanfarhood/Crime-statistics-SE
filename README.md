@@ -21,6 +21,7 @@ Where the user won’t have to go through a long process to access the statistic
     - Refers the user to the source.
     - Asks the user to input a year of choice in the within the specified range, gives user an example too.
     - When the user enters a valid year, a menu of offense selection will be displayed.
+    - If user were to input invalid data an error will be displayed and the user will be asked to input valid data, until input is valid.
 
 ![start](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/start.png)
 
@@ -30,6 +31,7 @@ Where the user won’t have to go through a long process to access the statistic
 
     - User is asked to input the offense number they want statistics for.
     - When user input their choice a table of the statistic will be displayed.
+    - An error will be displayed if invalid input and the user will be asked to input a valid data, until input is valid.
 
 ![menu](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/menu.png)
 
@@ -47,6 +49,7 @@ Where the user won’t have to go through a long process to access the statistic
 
     - If the user input yes the program will start from beginning.
     - If user input exit the program will stop running.
+    - Error will be displayed if anything than 'yes' or 'exit' is input and the user will be asked to input valid data, until input is valid.
 
 ![end](https://github.com/rimanfarhood/Crime-statistics-SE/blob/main/assets/end.png)
 
